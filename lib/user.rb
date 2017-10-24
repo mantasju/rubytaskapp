@@ -1,15 +1,9 @@
+# frozen_string_literal: true
+
+# The User class is responsible for defining a User in the app
 class User
-
-	def username
-		@username
-	end
-
-	def initialize(username, password)
-		@username = username
-		@password = password
-	end
-
-	def ==(another_user)
-		username == another_user.username
-	end
+  def initialize(username, password)
+    @username = username
+    @password = password
+  end
 end

@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html xmlns='http://www.w3.org/1999/xhtml'>
   <head>
-    <title>Code coverage for Rubytaskapp</title>
+    <title>Code coverage for Ruby</title>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <script src='./assets/0.10.2/application.js' type='text/javascript'></script>    
     <link href='./assets/0.10.2/application.css' media='screen, projection, print' rel='stylesheet' type='text/css'>
-    <link rel="shortcut icon" type="image/png" href="./assets/0.10.2/favicon_yellow.png" />
+    <link rel="shortcut icon" type="image/png" href="./assets/0.10.2/favicon_red.png" />
     <link rel="icon" type="image/png" href="./assets/0.10.2/favicon.png" />
   </head>
   
@@ -14,27 +14,27 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2017-10-22T23:16:25+03:00">2017-10-22T23:16:25+03:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2017-10-24T21:59:02+03:00">2017-10-24T21:59:02+03:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="yellow">87.1%</span></span>
+    (<span class="covered_percent"><span class="red">42.65%</span></span>
      covered at
      <span class="covered_strength">
        <span class="red">
-         0.98
+         0.43
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>3</b> files in total.
-    <b>31</b> relevant lines. 
-    <span class="green"><b>27</b> lines covered</span> and
-    <span class="red"><b>4</b> lines missed </span>
+    <b>68</b> relevant lines. 
+    <span class="green"><b>29</b> lines covered</span> and
+    <span class="red"><b>39</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -51,33 +51,33 @@
     <tbody>
       
       <tr>
-        <td class="strong"><a href="#f2ac9673782bf619ae43796bb07be156bfb8f6f0" class="src_link" title="lib/team.rb">lib/team.rb</a></td>
-        <td class="red strong">73.33 %</td>
-        <td>33</td>
+        <td class="strong"><a href="#e4b671c4446d8ba967533a775410c0c96cf098ea" class="src_link" title="lib/team.rb">lib/team.rb</a></td>
+        <td class="red strong">34.78 %</td>
+        <td>42</td>
+        <td>23</td>
+        <td>8</td>
         <td>15</td>
-        <td>11</td>
+        <td>0.3</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#7e85027447a2c2939a0cc599d6d15f1238d20ff1" class="src_link" title="lib/user.rb">lib/user.rb</a></td>
+        <td class="red strong">50.0 %</td>
+        <td>9</td>
         <td>4</td>
-        <td>0.7</td>
+        <td>2</td>
+        <td>2</td>
+        <td>0.5</td>
       </tr>
       
       <tr>
-        <td class="strong"><a href="#ffd1ef18f20c5bf1e2a34e9ace30f93d90eb4d88" class="src_link" title="lib/user.rb">lib/user.rb</a></td>
-        <td class="green strong">100.0 %</td>
-        <td>15</td>
-        <td>8</td>
-        <td>8</td>
-        <td>0</td>
-        <td>1.4</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#a69f1de2efa46b9b30b5ffb3aeee7d7acc12e0ad" class="src_link" title="spec/team_spec.rb">spec/team_spec.rb</a></td>
-        <td class="green strong">100.0 %</td>
-        <td>14</td>
-        <td>8</td>
-        <td>8</td>
-        <td>0</td>
-        <td>1.1</td>
+        <td class="strong"><a href="#e78e6b2a3269f3c88455b78bb99a765b2c2c0d78" class="src_link" title="spec/team_spec.rb">spec/team_spec.rb</a></td>
+        <td class="red strong">46.34 %</td>
+        <td>80</td>
+        <td>41</td>
+        <td>19</td>
+        <td>22</td>
+        <td>0.5</td>
       </tr>
       
     </tbody>
@@ -96,24 +96,24 @@
     
       <div class="source_files">
       
-        <div class="source_table" id="f2ac9673782bf619ae43796bb07be156bfb8f6f0">
+        <div class="source_table" id="e4b671c4446d8ba967533a775410c0c96cf098ea">
   <div class="header">
     <h3>lib/team.rb</h3>
-    <h4><span class="red">73.33 %</span> covered</h4>
+    <h4><span class="red">34.78 %</span> covered</h4>
     <div>
-      <b>15</b> relevant lines. 
-      <span class="green"><b>11</b> lines covered</span> and
-      <span class="red"><b>4</b> lines missed.</span>
+      <b>23</b> relevant lines. 
+      <span class="green"><b>8</b> lines covered</span> and
+      <span class="red"><b>15</b> lines missed.</span>
     </div>
   </div>
   
   <pre>
     <ol>
       
-        <li class="covered" data-hits="1" data-linenumber="1">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="1">
           
-          <code class="ruby">require &#39;user&#39;</code>
+          
+          <code class="ruby"># frozen_string_literal: true</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="2">
@@ -125,7 +125,7 @@
         <li class="covered" data-hits="1" data-linenumber="3">
           <span class="hits">1</span>
           
-          <code class="ruby">class Team</code>
+          <code class="ruby">require_relative &#39;user&#39;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="4">
@@ -134,106 +134,106 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="5">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="5">
           
-          <code class="ruby">	@@team_players = []</code>
+          
+          <code class="ruby"># The Team class is responsible for defining a team in the app</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="6">
+        <li class="covered" data-hits="1" data-linenumber="6">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby"></code>
+          <code class="ruby">class Team</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="7">
           <span class="hits">1</span>
           
-          <code class="ruby">	def initialize(user, team_size)</code>
+          <code class="ruby">  attr_reader :team_size, :team_owner</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="8">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="8">
           
-          <code class="ruby">		@team_owner = user</code>
+          
+          <code class="ruby"></code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="9">
           <span class="hits">1</span>
           
-          <code class="ruby">		@team_size = team_size</code>
+          <code class="ruby">  def initialize(user, team_size)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="10">
+        <li class="missed" data-hits="0" data-linenumber="10">
           
           
-          <code class="ruby">	end</code>
+          <code class="ruby">    @team_owner = user</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="11">
+        <li class="missed" data-hits="0" data-linenumber="11">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">    @team_size = team_size</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="12">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="12">
           
-          <code class="ruby">	def change_team_owner(user)</code>
+          
+          <code class="ruby">    @team_players = []</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="13">
+        <li class="never" data-hits="" data-linenumber="13">
           
           
-          <code class="ruby">		@team_owner = user</code>
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="14">
           
           
-          <code class="ruby">	end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="15">
-          
-          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="16">
+        <li class="covered" data-hits="1" data-linenumber="15">
           <span class="hits">1</span>
           
-          <code class="ruby">	def add_team_member(user_to_add, calling_user) # nezinau, kaip cia igyvendinti viska (reikia prisijungimo ir panasiai), tai dabar palieku sitaip</code>
+          <code class="ruby">  def change_team_owner(user_to_change_to, calling_user)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="17">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="16">
           
-          <code class="ruby">		raise &quot;You are not the team owner&quot; if @team_owner != calling_user</code>
+          
+          <code class="ruby">    unless calling_user.equal?(team_owner)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="17">
+          
+          
+          <code class="ruby">      raise &#39;Only team owner can change the team owner&#39;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="18">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">    end</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="19">
           
           
-          <code class="ruby">		raise &quot;User is already on the team&quot; if @@team_players.include? user_to_add</code>
+          <code class="ruby">    raise &#39;New team owner can\&#39;t be nil&#39; if user_to_change_to.equal?(nil)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="20">
+        <li class="missed" data-hits="0" data-linenumber="20">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">    @team_owner = user_to_change_to</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="21">
+        <li class="never" data-hits="" data-linenumber="21">
           
           
-          <code class="ruby">		raise &quot;Team is already full&quot; if @@team_players.length == @team_size</code>
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="22">
@@ -242,16 +242,16 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="23">
+        <li class="never" data-hits="" data-linenumber="23">
           
           
-          <code class="ruby">		@@team_players.push(user_to_add)</code>
+          <code class="ruby">  # nezinau, kaip cia igyvendinti viska (reikia prisijungimo ir panasiai)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="24">
           
           
-          <code class="ruby">	end</code>
+          <code class="ruby">  # tai dabar palieku sitaip</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="25">
@@ -263,48 +263,102 @@
         <li class="covered" data-hits="1" data-linenumber="26">
           <span class="hits">1</span>
           
-          <code class="ruby">	def remove_team_member(user_to_remove, calling_user)</code>
+          <code class="ruby">  def add_team_member(user_to_add, calling_user)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="27">
+        <li class="missed" data-hits="0" data-linenumber="27">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">    raise &#39;User to add cannot be nil&#39; if user_to_add.equal?(nil)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="28">
+        <li class="missed" data-hits="0" data-linenumber="28">
           
           
-          <code class="ruby">	end</code>
+          <code class="ruby">    raise &#39;You are not the team owner&#39; unless team_owner.equal?(calling_user)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="29">
+        <li class="missed" data-hits="0" data-linenumber="29">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">    raise &#39;Team is already full&#39; if @team_players.length.equal?(team_size)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="30">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="30">
           
-          <code class="ruby">	def get_team_member_count()</code>
+          
+          <code class="ruby">    raise &#39;User is already on the team&#39; if @team_players.include? user_to_add</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="31">
+        <li class="missed" data-hits="0" data-linenumber="31">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">    @team_players.push(user_to_add)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="32">
           
           
-          <code class="ruby">	end</code>
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="33">
           
           
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="34">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def remove_team_member(user_to_remove, calling_user)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="35">
+          
+          
+          <code class="ruby">    raise &#39;You are not the team owner&#39; unless team_owner.equal?(calling_user)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="36">
+          
+          
+          <code class="ruby">    @team_players.delete(user_to_remove)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="37">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="38">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="39">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def player_on_team?(user_to_check)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="40">
+          
+          
+          <code class="ruby">    @team_players.include? user_to_check</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="41">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="42">
+          
+          
           <code class="ruby">end</code>
         </li>
       
@@ -313,105 +367,69 @@
 </div>
 
       
-        <div class="source_table" id="ffd1ef18f20c5bf1e2a34e9ace30f93d90eb4d88">
+        <div class="source_table" id="7e85027447a2c2939a0cc599d6d15f1238d20ff1">
   <div class="header">
     <h3>lib/user.rb</h3>
-    <h4><span class="green">100.0 %</span> covered</h4>
+    <h4><span class="red">50.0 %</span> covered</h4>
     <div>
-      <b>8</b> relevant lines. 
-      <span class="green"><b>8</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
+      <b>4</b> relevant lines. 
+      <span class="green"><b>2</b> lines covered</span> and
+      <span class="red"><b>2</b> lines missed.</span>
     </div>
   </div>
   
   <pre>
     <ol>
       
-        <li class="covered" data-hits="1" data-linenumber="1">
+        <li class="never" data-hits="" data-linenumber="1">
+          
+          
+          <code class="ruby"># frozen_string_literal: true</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="2">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="3">
+          
+          
+          <code class="ruby"># The User class is responsible for defining a User in the app</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="4">
           <span class="hits">1</span>
           
           <code class="ruby">class User</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="2">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="3">
+        <li class="covered" data-hits="1" data-linenumber="5">
           <span class="hits">1</span>
           
-          <code class="ruby">	def username</code>
+          <code class="ruby">  def initialize(username, password)</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="4">
-          <span class="hits">2</span>
+        <li class="missed" data-hits="0" data-linenumber="6">
           
-          <code class="ruby">		@username</code>
+          
+          <code class="ruby">    @username = username</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="5">
+        <li class="missed" data-hits="0" data-linenumber="7">
           
           
-          <code class="ruby">	end</code>
+          <code class="ruby">    @password = password</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="6">
+        <li class="never" data-hits="" data-linenumber="8">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="7">
-          <span class="hits">1</span>
-          
-          <code class="ruby">	def initialize(username, password)</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="8">
-          <span class="hits">2</span>
-          
-          <code class="ruby">		@username = username</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="9">
-          <span class="hits">2</span>
-          
-          <code class="ruby">		@password = password</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="10">
-          
-          
-          <code class="ruby">	end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="11">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="12">
-          <span class="hits">1</span>
-          
-          <code class="ruby">	def ==(another_user)</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="13">
-          <span class="hits">1</span>
-          
-          <code class="ruby">		username == another_user.username</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="14">
-          
-          
-          <code class="ruby">	end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="15">
+        <li class="never" data-hits="" data-linenumber="9">
           
           
           <code class="ruby">end</code>
@@ -422,24 +440,24 @@
 </div>
 
       
-        <div class="source_table" id="a69f1de2efa46b9b30b5ffb3aeee7d7acc12e0ad">
+        <div class="source_table" id="e78e6b2a3269f3c88455b78bb99a765b2c2c0d78">
   <div class="header">
     <h3>spec/team_spec.rb</h3>
-    <h4><span class="green">100.0 %</span> covered</h4>
+    <h4><span class="red">46.34 %</span> covered</h4>
     <div>
-      <b>8</b> relevant lines. 
-      <span class="green"><b>8</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
+      <b>41</b> relevant lines. 
+      <span class="green"><b>19</b> lines covered</span> and
+      <span class="red"><b>22</b> lines missed.</span>
     </div>
   </div>
   
   <pre>
     <ol>
       
-        <li class="covered" data-hits="1" data-linenumber="1">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="1">
           
-          <code class="ruby">require &#39;spec_helper&#39;</code>
+          
+          <code class="ruby"># frozen_string_literal: true</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="2">
@@ -451,7 +469,7 @@
         <li class="covered" data-hits="1" data-linenumber="3">
           <span class="hits">1</span>
           
-          <code class="ruby">RSpec.describe Team do</code>
+          <code class="ruby">require &#39;spec_helper&#39;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="4">
@@ -463,58 +481,454 @@
         <li class="covered" data-hits="1" data-linenumber="5">
           <span class="hits">1</span>
           
-          <code class="ruby">	context &quot;add members&quot; do</code>
+          <code class="ruby">RSpec.describe Team do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="6">
           <span class="hits">1</span>
           
-          <code class="ruby">		it &quot;should not allow add members if you are not team owner&quot; do</code>
+          <code class="ruby">  before(:each) do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="7">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="7">
           
-          <code class="ruby">		owner_user = User.new(&quot;labas&quot;, &quot;krabas&quot;)</code>
+          
+          <code class="ruby">    @owner_user = User.new(&#39;labas&#39;, &#39;krabas&#39;)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="8">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="8">
           
-          <code class="ruby">		team = Team.new(owner_user, 5)</code>
+          
+          <code class="ruby">    @user = User.new(&#39;baduser&#39;, &#39;badpassword&#39;)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="9">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="9">
           
-          <code class="ruby">		user = User.new(&quot;baduser&quot;, &quot;1&quot;)</code>
+          
+          <code class="ruby">    @team = Team.new(@owner_user, 5)</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="10">
-          <span class="hits">2</span>
+        <li class="never" data-hits="" data-linenumber="10">
           
-          <code class="ruby">		expect{team.add_team_member(user, user)}.to raise_error(&quot;You are not the team owner&quot;)		</code>
+          
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="11">
           
           
-          <code class="ruby">		end</code>
+          <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="12">
+        <li class="covered" data-hits="1" data-linenumber="12">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">	end</code>
+          <code class="ruby">  context &#39;initialize&#39; do</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="13">
+        <li class="covered" data-hits="1" data-linenumber="13">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &#39;should have the assigned team size after creation&#39; do</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="14">
+          
+          
+          <code class="ruby">      expect(@team.team_size).to eq(5)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="15">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="16">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &#39;should have the correct team owner after creation&#39; do</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="17">
+          
+          
+          <code class="ruby">      expect(@team.team_owner).to eq(@owner_user)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="18">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="19">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="20">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="14">
+        <li class="covered" data-hits="1" data-linenumber="21">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  context &#39;team owner&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="22">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &#39;should only allow team owner to change team owner&#39; do</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="23">
+          
+          
+          <code class="ruby">      expect { @team.change_team_owner(@user, @user) }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="24">
+          
+          
+          <code class="ruby">        .to raise_error(&#39;Only team owner can change the team owner&#39;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="25">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="26">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &#39;should change team owner&#39; do</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="27">
+          
+          
+          <code class="ruby">      @team.change_team_owner(@user, @owner_user)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="28">
+          
+          
+          <code class="ruby">      expect(@team.team_owner).to eq(@user)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="29">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="30">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="31">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &#39;should not allow to change team owner to nil&#39; do</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="32">
+          
+          
+          <code class="ruby">      expect { @team.change_team_owner(nil, @owner_user) }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="33">
+          
+          
+          <code class="ruby">        .to raise_error(&#39;New team owner can\&#39;t be nil&#39;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="34">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="35">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="36">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="37">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  context &#39;add members&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="38">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &#39;should not allow action if you are not team owner&#39; do</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="39">
+          
+          
+          <code class="ruby">      expect { @team.add_team_member(@user, @user) }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="40">
+          
+          
+          <code class="ruby">        .to raise_error(&#39;You are not the team owner&#39;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="41">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="42">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="43">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &#39;should not allow to add the same user twice&#39; do</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="44">
+          
+          
+          <code class="ruby">      @team.add_team_member(@user, @owner_user)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="45">
+          
+          
+          <code class="ruby">      expect { @team.add_team_member(@user, @owner_user) }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="46">
+          
+          
+          <code class="ruby">        .to raise_error(&#39;User is already on the team&#39;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="47">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="48">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="49">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &#39;should not allow to add new members after reached limit&#39; do</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="50">
+          
+          
+          <code class="ruby">      expect do</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="51">
+          
+          
+          <code class="ruby">        (1..10).to_a.each do |i|</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="52">
+          
+          
+          <code class="ruby">          @team.add_team_member(User.new(&quot;#{i}a.join}&quot;, &#39;asd&#39;), @owner_user)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="53">
+          
+          
+          <code class="ruby">        end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="54">
+          
+          
+          <code class="ruby">      end.to raise_error(&#39;Team is already full&#39;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="55">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="56">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="57">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &#39;should not allow to add a nil member&#39; do</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="58">
+          
+          
+          <code class="ruby">      expect { @team.add_team_member(nil, @owner_user) }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="59">
+          
+          
+          <code class="ruby">        .to raise_error(&#39;User to add cannot be nil&#39;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="60">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="61">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="62">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &#39;should succesfully add a member&#39; do</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="63">
+          
+          
+          <code class="ruby">      @team.add_team_member(@user, @owner_user)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="64">
+          
+          
+          <code class="ruby">      expect(@team.player_on_team?(@user)).to be true</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="65">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="66">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="67">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="68">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  context &#39;remove members&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="69">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &#39;should not allow allow action if you are not team owner&#39; do</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="70">
+          
+          
+          <code class="ruby">      expect { @team.remove_team_member(@user, @user) }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="71">
+          
+          
+          <code class="ruby">        .to raise_error(&#39;You are not the team owner&#39;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="72">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="73">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="74">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &#39;should succesfully remove a member&#39; do</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="75">
+          
+          
+          <code class="ruby">      @team.add_team_member(@user, @owner_user)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="76">
+          
+          
+          <code class="ruby">      @team.remove_team_member(@user, @owner_user)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="77">
+          
+          
+          <code class="ruby">      expect(@team.player_on_team?(@user)).to be false</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="78">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="79">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="80">
           
           
           <code class="ruby">end</code>

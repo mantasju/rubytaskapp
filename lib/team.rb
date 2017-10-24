@@ -1,33 +1,42 @@
-require 'user'
+# frozen_string_literal: true
 
+require_relative 'user'
+
+# The Team class is responsible for defining a team in the app
 class Team
+  attr_reader :team_size, :team_owner
 
-	@@team_players = []
+  def initialize(user, team_size)
+    @team_owner = user
+    @team_size = team_size
+    @team_players = []
+  end
 
-	def initialize(user, team_size)
-		@team_owner = user
-		@team_size = team_size
-	end
+  def change_team_owner(user_to_change_to, calling_user)
+    unless calling_user.equal?(team_owner)
+      raise 'Only team owner can change the team owner'
+    end
+    raise 'New team owner can\'t be nil' if user_to_change_to.equal?(nil)
+    @team_owner = user_to_change_to
+  end
 
-	def change_team_owner(user)
-		@team_owner = user
-	end
+  # nezinau, kaip cia igyvendinti viska (reikia prisijungimo ir panasiai)
+  # tai dabar palieku sitaip
 
-	def add_team_member(user_to_add, calling_user) # nezinau, kaip cia igyvendinti viska (reikia prisijungimo ir panasiai), tai dabar palieku sitaip
-		raise "You are not the team owner" if @team_owner != calling_user
+  def add_team_member(user_to_add, calling_user)
+    raise 'User to add cannot be nil' if user_to_add.equal?(nil)
+    raise 'You are not the team owner' unless team_owner.equal?(calling_user)
+    raise 'Team is already full' if @team_players.length.equal?(team_size)
+    raise 'User is already on the team' if @team_players.include? user_to_add
+    @team_players.push(user_to_add)
+  end
 
-		raise "User is already on the team" if @@team_players.include? user_to_add
+  def remove_team_member(user_to_remove, calling_user)
+    raise 'You are not the team owner' unless team_owner.equal?(calling_user)
+    @team_players.delete(user_to_remove)
+  end
 
-		raise "Team is already full" if @@team_players.length == @team_size
-
-		@@team_players.push(user_to_add)
-	end
-
-	def remove_team_member(user_to_remove, calling_user)
-
-	end
-
-	def get_team_member_count()
-
-	end
+  def player_on_team?(user_to_check)
+    @team_players.include? user_to_check
+  end
 end
