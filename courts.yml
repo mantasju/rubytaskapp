@@ -1,0 +1,24 @@
+--- &1 !ruby/object:Court
+x: *1
+y: 1000
+city: Viluva
+created_by: !ruby/object:User
+  username: testuser
+  password: 5d9c68c6c50ed3d02a2fcf54f63993b6
+  email: test@test.test
+  age: 10
+  favourite_courts: []
+reservations: []
+reviews: []
+--- &1 !ruby/object:Court
+x: 1000
+y: *1
+city: Viluva
+created_by: !ruby/object:User
+  username: testuser
+  password: 5d9c68c6c50ed3d02a2fcf54f63993b6
+  email: test@test.test
+  age: 10
+  favourite_courts: []
+reservations: []
+reviews: []

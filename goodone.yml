@@ -1,0 +1,10 @@
+--- !ruby/object:User
+username: abc
+password: def
+email: asd@asd.com
+age: 13
+--- !ruby/object:User
+username: abcef
+password: defgh
+email: asasdd@asasdd.com
+age: 15

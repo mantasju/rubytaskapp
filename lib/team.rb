@@ -4,12 +4,13 @@ require_relative 'user'
 
 # The Team class is responsible for defining a team in the app
 class Team
-  attr_reader :team_size, :team_owner
+  attr_reader :team_size, :team_owner, :team_name
 
-  def initialize(user, team_size)
+  def initialize(user, team_size, team_name)
     @team_owner = user
     @team_size = team_size
     @team_players = []
+    @team_name = team_name
   end
 
   def change_team_owner(user_to_change_to, calling_user)
@@ -38,5 +39,9 @@ class Team
 
   def player_on_team?(user_to_check)
     @team_players.include? user_to_check
+  end
+
+  def ==(o)
+    o.team_owner == team_owner && o.team_name == team_name
   end
 end
