@@ -4,9 +4,9 @@ require 'spec_helper'
 
 RSpec.describe Team do
   before(:each) do
-    @owner_user = User.new('labas', 'krabas')
-    @user = User.new('baduser', 'badpassword')
-    @team = Team.new(@owner_user, 5)
+    @owner_user = User.new('labas', 'krabas', "a@a.a", 12)
+    @user = User.new('baduser', 'badpassword', "a@a.a", 12)
+    @team = Team.new(@owner_user, 5, "nice_team")
   end
 
   context 'initialize' do
@@ -49,7 +49,7 @@ RSpec.describe Team do
     it 'should not allow to add new members after reached limit' do
       expect do
         (1..10).to_a.each do |i|
-          @team.add_team_member(User.new("#{i}a.join}", 'asd'), @owner_user)
+          @team.add_team_member(User.new("#{i}a.join}", 'asd', "a@a.a", 15), @owner_user)
         end
       end.to raise_error('Team is already full')
     end
