@@ -4,9 +4,9 @@ require 'spec_helper'
 
 RSpec.describe Team do
   before(:each) do
-    @owner_user = User.new('labas', 'krabas', "a@a.a", 12)
-    @user = User.new('baduser', 'badpassword', "a@a.a", 12)
-    @team = Team.new(@owner_user, 5, "nice_team")
+    @owner_user = User.new('labas', 'krabas', 'a@a.a', 12)
+    @user = User.new('baduser', 'badpassword', 'a@a.a', 12)
+    @team = Team.new(@owner_user, 5, 'nice_team')
   end
 
   context 'initialize' do
@@ -15,6 +15,30 @@ RSpec.describe Team do
     end
     it 'should have the correct team owner after creation' do
       expect(@team.team_owner).to eq(@owner_user)
+    end
+    it 'should have the correct team name after creation' do
+      expect(@team.team_name).to eq('nice_team')
+    end
+  end
+
+  context 'equals' do
+    it 'two teams eq if the owner is the same and name is the same' do
+      new_team = Team.new(@owner_user, 5, 'nice_team')
+
+      expect(new_team).to eq(@team)
+    end
+
+    it 'two teams not eq if the owner is the same but name is not' do
+      new_team = Team.new(@owner_user, 5, 'nicee_team')
+
+      expect(new_team).not_to eq @team
+    end
+
+    it 'two teams not eq if the owner is not the same but the name is' do
+      user = User.new('loluser', 'lolpassword', 'a@a.a', 12)
+      new_team = Team.new(user, 5, 'nice_team')
+
+      expect(new_team).not_to eq @team
     end
   end
 
@@ -49,7 +73,8 @@ RSpec.describe Team do
     it 'should not allow to add new members after reached limit' do
       expect do
         (1..10).to_a.each do |i|
-          @team.add_team_member(User.new("#{i}a.join}", 'asd', "a@a.a", 15), @owner_user)
+          user = User.new("#{i}a.join}", 'asd', 'a@a.a', 15)
+          @team.add_team_member(user, @owner_user)
         end
       end.to raise_error('Team is already full')
     end

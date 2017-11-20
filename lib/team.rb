@@ -21,9 +21,6 @@ class Team
     @team_owner = user_to_change_to
   end
 
-  # nezinau, kaip cia igyvendinti viska (reikia prisijungimo ir panasiai)
-  # tai dabar palieku sitaip
-
   def add_team_member(user_to_add, calling_user)
     raise 'User to add cannot be nil' if user_to_add.equal?(nil)
     raise 'You are not the team owner' unless team_owner.equal?(calling_user)
@@ -41,7 +38,7 @@ class Team
     @team_players.include? user_to_check
   end
 
-  def ==(o)
-    o.team_owner == team_owner && o.team_name == team_name
+  def ==(other)
+    other.team_owner.equal?(team_owner) && other.team_name.equal?(team_name)
   end
 end

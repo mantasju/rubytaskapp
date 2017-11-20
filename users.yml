@@ -1,6 +1,10 @@
 --- !ruby/object:User
 username: testuser
 password: 5d9c68c6c50ed3d02a2fcf54f63993b6
-email: test@test.test
-age: 10
-favourite_courts: []
+email: a@a.a
+age: 15
+--- !ruby/object:User
+username: newtestuser
+password: f375a132f84de55f2564b2b355b32840
+email: asdasd@asd.asd
+age: 22

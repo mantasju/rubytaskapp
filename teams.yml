@@ -1,0 +1,9 @@
+--- !ruby/object:Team
+team_owner: !ruby/object:User
+  username: mantas
+  password: 42a92d3b636db32fef4edb3308e0804d
+  email: mantas@mantas.lt
+  age: 21
+team_size: 5
+team_players: []
+team_name: kieti

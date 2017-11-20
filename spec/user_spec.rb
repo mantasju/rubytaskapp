@@ -3,34 +3,40 @@
 require 'spec_helper'
 
 RSpec.describe User do
-  
-  before(:all) do
-    LoginHelper.login("testuser", "testuser")
-    @user = LoginHelper.get_logged_in_user
-  end
-
-  after(:all) do
-    LoginHelper.logout
-  end
-
-  context 'courts' do
-    it 'should succesfully add a new favourite court' do
-      court = Court.new(1000, 1000, "asdasd")
-      
-      @user.add_favourite_court(court)
-
-      expect(@user.favourite_courts).to include(court)
-      @user.remove_favourite_court(court)
+  context 'initialize' do
+    it 'should not allow creation with a bad email' do
+      expect { User.new('asdasd', 'asdasd', 13, 15) }
+        .to raise_error 'Email must be a string'
     end
 
-    it 'should succesfully remove a favourite court' do
-      court = Court.new(1000, 1000, "asdasd")
+    it 'should not allow creation with a bad age' do
+      expect { User.new('asdasd', 'asdasd', 'a@a.a', 'asd') }
+        .to raise_error 'Age must be a number'
+    end
 
+    it 'should have the correct age after creation' do
+      expect(User.new('asdasd', 'asdasd', 'a@a.a', 15).age).to eq 15
+    end
 
-      @user.add_favourite_court(court)
-      @user.remove_favourite_court(court)
+    it 'should have the correct email after creation' do
+      expect(User.new('asdasd', 'asdasd', 'a@a.a', 15).email).to eq 'a@a.a'
+    end
 
-      expect(@user.favourite_courts).not_to include(court)
+    it 'should encrypt the password during creation' do
+      expect(User.new('asdasd', 'asdasd', 'a@a.a', 15).password)
+        .to eq Digest::MD5.hexdigest('asdasd')
+    end
+  end
+
+  context 'equal' do
+    it 'two users should eq if their usernames are eq' do
+      expect(User.new('asdasdasd', 'asdasdasd', 'a@a.a', 15))
+        .to eq(User.new('asdasdasd', 'a', 'b@b.b', 14))
+    end
+
+    it 'two users shouldnt eq if their usernames are not eq' do
+      expect(User.new('asdasdasd', 'asdasdasd', 'a@a.a', 15))
+        .not_to eq(User.new('asdsdfasdasd', 'a', 'b@b.b', 14))
     end
   end
 end

@@ -2,18 +2,17 @@
 
 require 'digest/md5'
 
+# Helps with logging in and checking the logged in state
 class LoginHelper
-
-  #returns logged in user if login is successful
   def self.login(username, password)
-    raise "Username cannot be blank" if username.to_s.empty?
-    raise "Password cannot be blank" if password.to_s.empty?
+    raise 'Fields cannot be blank' if username.empty? || password.empty?
 
-    user = Loader.get(:user, {"username" => username})
+    user = Loader.get(:user, 'username' => username)
 
-    raise "Username is incorrect" if user.nil?
-    raise "Password is incorrect" if Digest::MD5.hexdigest(password) != user.password
-    
+    raise 'Username is incorrect' unless user
+    unless Digest::MD5.hexdigest(password).eql? user.password
+      raise 'Password is incorrect'
+    end
     @logged_in_user = user
   end
 
@@ -21,12 +20,12 @@ class LoginHelper
     @logged_in_user = nil
   end
 
-  def self.is_logged_in?
-    !@logged_in_user.nil?
+  def self.logged_in?
+    @logged_in_user.instance_of? User
   end
 
-  def self.get_logged_in_user
-    raise "You are not logged in" if !is_logged_in?
+  def self.logged_in_user
+    raise 'You are not logged in' unless logged_in?
 
     @logged_in_user
   end

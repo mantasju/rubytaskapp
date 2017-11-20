@@ -1,0 +1,3 @@
+--- !ruby/object:TestItem
+test_string: hello
+random_value: 0

@@ -2,35 +2,23 @@
 
 require 'yaml'
 require 'digest/md5'
+require_relative 'court'
 
 # The User class is responsible for defining a User in the app
 class User
-  attr_reader :username, :email, :age, :password, :favourite_courts
-  attr_writer :email, :age
+  attr_reader :username, :email, :age, :password
 
   def initialize(username, password, email, age)
+    raise 'Age must be a number' unless age.is_a? Numeric
+    raise 'Email must be a string' unless email.instance_of? String
+
     @username = username
     @password = Digest::MD5.hexdigest(password)
     @email = email
     @age = age
-    @favourite_courts = []
   end
 
-  def ==(o)
-    username == o.username
-  end
-
-  def add_favourite_court(court)
-    raise "Given object is not a court" if !court.is_a? Court
-
-    favourite_courts.push(court)
-    Loader.update(:user, self)
-  end
-
-  def remove_favourite_court(court)
-    raise "Given object is not a court" if !court.is_a? Court
-
-    favourite_courts.delete(court)
-    Loader.update(:user, self)
+  def ==(other)
+    username.equal? other.username
   end
 end
